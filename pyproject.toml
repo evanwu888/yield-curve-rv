@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yield-curve-rv"
+version = "0.1.0"
+description = "US Treasury yield-curve relative-value research toolkit"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.24", "pandas>=2.0"]
+
+[project.optional-dependencies]
+charts = ["matplotlib>=3.6"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["ycrv*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# add the repo root to sys.path so `import ycrv` works without installing
+pythonpath = ["."]

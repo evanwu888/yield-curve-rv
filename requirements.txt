@@ -1,0 +1,9 @@
+# Core (required) -- the library runs on these two alone.
+numpy>=1.24
+pandas>=2.0
+
+# Optional -- charts in scripts/run_research.py --charts
+matplotlib>=3.6
+
+# Dev -- tests
+pytest>=7.0
